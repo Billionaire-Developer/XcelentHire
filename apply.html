@@ -24,9 +24,8 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Topbar Start -->
+        <!-- Topbar Start -->
     <div class="container-fluid bg-primary py-3">
         <div class="container">
             <div class="row">
@@ -88,7 +87,7 @@
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                        <button><a href="" class="nav-item nav-link">Start Hiring</a>
+                        <button><a href="hire.html" class="nav-item nav-link">Start Hiring</a>
                         <button><a href="apply.html" class="nav-item nav-link">Apply for Job</a>
                     </div>
                 </div>
@@ -103,13 +102,13 @@
         <div class="container py-5">
             <div class="row align-items-center py-4">
                 <div class="col-md-6 text-center text-md-left">
-                    <h1 class="mb-4 mb-md-0 text-white">Contact Us</h1>
+                    <h1 class="mb-4 mb-md-0 text-white">Apply for Job</h1>
                 </div>
                 <div class="col-md-6 text-center text-md-right">
                     <div class="d-inline-flex align-items-center">
                         <a class="btn text-white" href="">Home</a>
                         <i class="fas fa-angle-right text-white"></i>
-                        <a class="btn text-white disabled" href="">Contact Us</a>
+                        <a class="btn text-white disabled" href="">Apply for Job</a>
                     </div>
                 </div>
             </div>
@@ -117,78 +116,131 @@
     </div>
     <!-- Page Header Start -->
 
+ <section class="py-5" style="background-color: #000000;"> <!-- page section background -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
 
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container" style="max-width: 900px;">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="d-flex flex-column align-items-center justify-content-center text-center mb-5">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-white border border-light shadow rounded-circle mb-4" style="width: 100px; height: 100px; border-width: 15px !important;">
-                                    <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
-                                </div>
-                                <h5 class="font-weight-medium m-0 mt-2">Location, City, Country</h5>
+                <!-- Colored Form Container -->
+                <div class="bg-primary text-white p-5 rounded shadow">
+
+                    <h4 class="mb-4 text-center">Apply for a position at Remote Hire</h4>
+                    <p class="text-center mb-4 font-italic">Submit your application to join our talent pool</p>
+
+                    <form action="/submit-application" method="post" class="w-100" enctype="multipart/form-data">
+
+                        <!-- Personal Information -->
+                        <h6 class="mb-3">Personal Information</h6>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="d-flex flex-column align-items-center justify-content-center text-center mb-5">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-white border border-light shadow rounded-circle mb-4" style="width: 100px; height: 100px; border-width: 15px !important;">
-                                    <i class="fa fa-2x fa-envelope-open text-secondary"></i>
-                                </div>
-                                <h5 class="font-weight-medium m-0 mt-2">info@example.com</h5>
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" placeholder="Email Address" name="email" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="tel" class="form-control" placeholder="Phone Number" name="phone">
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="d-flex flex-column align-items-center justify-content-center text-center mb-5">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-white border border-light shadow rounded-circle mb-4" style="width: 100px; height: 100px; border-width: 15px !important;">
-                                    <i class="fa fa-2x fa-phone-alt text-secondary"></i>
-                                </div>
-                                <h5 class="font-weight-medium m-0 mt-2">+012 345 6789</h5>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Location (City, Country)" name="location" required>
+                        </div>
+
+                        <!-- Professional Information -->
+                        <h6 class="mt-4 mb-3">Professional Information</h6>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="Current Job Title">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select class="form-control">
+                                    <option selected disabled>Years of Experience</option>
+                                    <option>0 - 1 year</option>
+                                    <option>2 - 4 years</option>
+                                    <option>5 - 7 years</option>
+                                    <option>8+ years</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Primary Skills (e.g. React, Node, UI/UX)">
+                        </div>
+
+                        <!-- Resume & Links -->
+                        <h6 class="mt-4 mb-3">Resume & Links</h6>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label class="small">Upload Resume</label>
+                                <input type="file" class="form-control-file" accept=".pdf,.doc,.docx" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="url" class="form-control" placeholder="Portfolio / GitHub / LinkedIn URL">
+                            </div>
+                        </div>
+
+                        <!-- Preferences -->
+                        <h6 class="mt-4 mb-3">Work Preferences</h6>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <select class="form-control">
+                                    <option selected disabled>Preferred Work Type</option>
+                                    <option>Full-time</option>
+                                    <option>Part-time</option>
+                                    <option>Contract</option>
+                                    <option>Freelance</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <select class="form-control">
+                                    <option selected disabled>Availability</option>
+                                    <option>Immediately</option>
+                                    <option>2 Weeks</option>
+                                    <option>1 Month</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <h6 class="mt-4 mb-3">Additional Information</h6>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3"
+                                      placeholder="Briefly tell us about yourself or your remote work experience"></textarea>
+                        </div>
+
+                        <!-- Consent -->
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="consent" required>
+                            <label class="form-check-label" for="consent">
+                                I agree to the processing of my data for recruitment purposes
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-light btn-block mt-3">
+                            Submit Application
+                        </button>
+
+                    </form>
                 </div>
-                <div class="col-12">
-                    <div class="contact-form">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control" rows="6" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary py-3 px-5" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+</section>
 
 
-    <!-- Footer Start -->
+
+
+
+ <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 pt-5 px-sm-3 px-md-5">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
@@ -212,9 +264,9 @@
                 <h4 class="text-white mb-4">Quick Links</h4>
                 <div class="d-flex flex-column justify-content-start">
                     <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="about.html"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="service.html"><i class="fa fa-angle-right mr-2"></i>Services</a>
-                    <a class="text-white mb-2" href="pricing.html"><i class="fa fa-angle-right mr-2"></i>Pricing</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing</a>
                     <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                 </div>
             </div>
@@ -237,7 +289,7 @@
     <div class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
         <p class="m-0 text-center text-white">
             &copy; <a class="text-white font-weight-medium" href="#">Your Site Name</a>. All Rights Reserved. Designed by
-            <a class="text-white font-weight-medium">Billionaire Developer</a>
+            <a class="text-white font-weight-medium">Billionaire-Developer</a>
         </p>
     </div>
     <!-- Footer End -->
@@ -261,6 +313,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
 
-</html>
+</body>

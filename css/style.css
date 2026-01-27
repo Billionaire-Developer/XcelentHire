@@ -9571,3 +9571,73 @@ h6,
   padding: 0;
   list-style-type: none;
 }
+
+
+
+/* Added CSS */
+
+/* Fix modal form labels */
+.modal label {
+    color: #212529 !important;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* ===== Hire Form Styling ===== */
+#hireFormModal .modal-content {
+    border-radius: 12px;
+    padding: 30px;
+}
+
+#hireFormModal .modal-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#hireFormModal label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #212529;
+}
+
+#hireFormModal .form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 14px 16px;
+    font-size: 16px;
+}
+
+#hireFormModal .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.15);
+}
+
+#hireFormModal .btn-primary {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+/* Force dark text on selected option */
+#hireFormModal select.form-control {
+    color: #212529 !important;      /* dark text */
+    border: 1px solid #ced4da;
+    padding: 14px 16px;
+    font-size: 16px;
+    height: 50px; /* make it consistent with other inputs */
+    border-radius: 8px;
+    -webkit-appearance: none; /* remove default arrow for consistent style */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Optional: add a custom arrow */
+#hireFormModal select.form-control::after {
+    content: "▼";
+    float: right;
+    margin-right: 10px;
+    color: #212529;
+    pointer-events: none;
+}
