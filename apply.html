@@ -114,137 +114,179 @@
             </div>
         </div>
     </div>
-    <!-- Page Header Start -->
+    <!-- Page Header Stop -->
 
- <section class="py-5" style="background-color: #000000;"> <!-- page section background -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-md-10">
+    <section class="py-5" style="background-color: #1A1A1A;"> <!-- page section background -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
 
-                <!-- Colored Form Container -->
-                <div class="bg-primary text-white p-5 rounded shadow">
+                    <!-- Colored Form Container -->
+                    <div class="bg-primary text-white p-5 rounded shadow">
 
-                    <h4 class="mb-4 text-center">Apply for a position at Remote Hire</h4>
-                    <p class="text-center mb-4 font-italic">Submit your application to join our talent pool</p>
+                        <h4 class="mb-4 text-center">Apply for a position at XcelentHire</h4>
+                        <p class="text-center mb-4 font-italic">Submit your application to join our talent pool</p>
 
-                    <form action="/submit-application" method="post" class="w-100" enctype="multipart/form-data">
+                        <form action="/submit-application" method="post" class="w-100" enctype="multipart/form-data">
 
-                        <!-- Personal Information -->
-                        <h6 class="mb-3">Personal Information</h6>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+                            <!-- Personal Information -->
+                            <h6 class="mb-3">Personal Information</h6>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" placeholder="First Name" name="first_name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="Last Name" name="last_name" required>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email Address" name="email" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" name="phone">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <input type="email" class="form-control" placeholder="Email Address" name="email" required>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Location (City, Country)" name="location" required>
                             </div>
-                            <div class="form-group col-md-6">
-                                <input type="tel" class="form-control" placeholder="Phone Number" name="phone">
+
+                            <!-- Professional Information -->
+                            <h6 class="mt-4 mb-3">Professional Information</h6>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" placeholder="Current Job Title">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select class="form-control">
+                                        <option selected disabled>Years of Experience</option>
+                                        <option>0 - 1 year</option>
+                                        <option>2 - 4 years</option>
+                                        <option>5 - 7 years</option>
+                                        <option>8+ years</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Location (City, Country)" name="location" required>
-                        </div>
-
-                        <!-- Professional Information -->
-                        <h6 class="mt-4 mb-3">Professional Information</h6>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="Current Job Title">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Primary Skills (e.g. React, Node, UI/UX)">
                             </div>
-                            <div class="form-group col-md-6">
-                                <select class="form-control">
-                                    <option selected disabled>Years of Experience</option>
-                                    <option>0 - 1 year</option>
-                                    <option>2 - 4 years</option>
-                                    <option>5 - 7 years</option>
-                                    <option>8+ years</option>
-                                </select>
+
+                            <!-- Resume & Links -->
+                            <h6 class="mt-4 mb-3">Resume & Links</h6>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="small">Upload Resume</label>
+                                    <input type="file" class="form-control-file" accept=".pdf,.doc,.docx" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="url" class="form-control" placeholder="Portfolio / GitHub / LinkedIn URL">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Primary Skills (e.g. React, Node, UI/UX)">
-                        </div>
-
-                        <!-- Resume & Links -->
-                        <h6 class="mt-4 mb-3">Resume & Links</h6>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <label class="small">Upload Resume</label>
-                                <input type="file" class="form-control-file" accept=".pdf,.doc,.docx" required>
+                            <!-- Preferences -->
+                            <h6 class="mt-4 mb-3">Work Preferences</h6>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <select class="form-control">
+                                        <option selected disabled>Preferred Work Type</option>
+                                        <option>Full-time</option>
+                                        <option>Part-time</option>
+                                        <option>Contract</option>
+                                        <option>Freelance</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select class="form-control">
+                                        <option selected disabled>Availability</option>
+                                        <option>Immediately</option>
+                                        <option>2 Weeks</option>
+                                        <option>1 Month</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <input type="url" class="form-control" placeholder="Portfolio / GitHub / LinkedIn URL">
+
+                            <!-- Additional Information -->
+                            <h6 class="mt-4 mb-3">Additional Information</h6>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3"
+                                        placeholder="Briefly tell us about yourself or your remote work experience"></textarea>
                             </div>
-                        </div>
 
-                        <!-- Preferences -->
-                        <h6 class="mt-4 mb-3">Work Preferences</h6>
-                        <div class="row">
-                            <div class="form-group col-md-6">
-                                <select class="form-control">
-                                    <option selected disabled>Preferred Work Type</option>
-                                    <option>Full-time</option>
-                                    <option>Part-time</option>
-                                    <option>Contract</option>
-                                    <option>Freelance</option>
-                                </select>
+                            <!-- Consent -->
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="consent" required>
+                                <label class="form-check-label" for="consent">
+                                    I agree to the processing of my data for recruitment purposes
+                                </label>
                             </div>
-                            <div class="form-group col-md-6">
-                                <select class="form-control">
-                                    <option selected disabled>Availability</option>
-                                    <option>Immediately</option>
-                                    <option>2 Weeks</option>
-                                    <option>1 Month</option>
-                                </select>
-                            </div>
-                        </div>
 
-                        <!-- Additional Information -->
-                        <h6 class="mt-4 mb-3">Additional Information</h6>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3"
-                                      placeholder="Briefly tell us about yourself or your remote work experience"></textarea>
-                        </div>
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-light btn-block mt-3">
+                                Submit Application
+                            </button>
 
-                        <!-- Consent -->
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="consent" required>
-                            <label class="form-check-label" for="consent">
-                                I agree to the processing of my data for recruitment purposes
-                            </label>
-                        </div>
+                        </form>
+                    </div>
 
-                        <!-- Submit Button -->
-                        <button type="submit" class="btn btn-light btn-block mt-3">
-                            Submit Application
-                        </button>
-
-                    </form>
                 </div>
+            </div>
+        </div>
+    </section>
 
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <h6 class="text-secondary text-uppercase text-center font-weight-medium mb-3">Testimonial</h6>
+            <h1 class="display-4 text-center mb-5">Our Clients Say</h1>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item">
+                    <img class="position-relative rounded-circle bg-white shadow mx-auto" src="img/testimonial-1.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1;" alt="">
+                    <div class="bg-light text-center p-4 pt-0">
+                        <h5 class="font-weight-medium mt-5" style="color: black">John Millee</h5>
+                        <p class="text-muted font-italic">Operations Manager, US-based SaaS Company</p>
+                        <p class="m-0" style="color: rgb(119, 115, 115)">Partnering with this team has truly streamlined our remote hiring workflow. They provided vetted, dependable talent fast and managed payroll and operations flawlessly. It has been a cost-effective, stress-free solution for our us.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <img class="position-relative rounded-circle bg-white shadow mx-auto" src="img/testimonial-2.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1;" alt="">
+                    <div class="bg-light text-center p-4 pt-0">
+                        <h5 class="font-weight-medium mt-5" style="color: black">Sarah Thompson</h5>
+                        <p class="text-muted font-italic">HR Lead, UK Technology Firm</p>
+                        <p class="m-0" style="color: rgb(119, 115, 115)">What stood out immediately was the reliability and professionalism of the talent delivered. The staffing partner assumed complete responsibility for recruitment, onboarding, and ongoing management, enabling us to focus fully on our business</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <img class="position-relative rounded-circle bg-white shadow mx-auto" src="img/testimonial-3.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1;" alt="">
+                    <div class="bg-light text-center p-4 pt-0">
+                        <h5 class="font-weight-medium mt-5" style="color: black">David Wilson</h5>
+                        <p class="text-muted font-italic">Founder, Global E-commerce Company</p>
+                        <p class="m-0" style="color: rgb(119, 115, 115)">We were able to expand our team faster than anticipated. From talent sourcing through full-time deployment, everything was managed efficiently. The pre-funded payroll approach also provided us peace of mind</p>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <img class="position-relative rounded-circle bg-white shadow mx-auto" src="img/testimonial-4.jpg" style="width: 100px; height: 100px; padding: 12px; margin-bottom: -50px; z-index: 1;" alt="">
+                    <div class="bg-light text-center p-4 pt-0">
+                        <h5 class="font-weight-medium mt-5" style="color: black">Rachel Adams</h5>
+                        <p class="text-muted font-italic">Finance Director, International Consulting Firm</p>
+                        <p class="m-0" style="color: rgb(119, 115, 115)">The quality of talent relative to the cost has been exceptional. There were no hidden fees, and everything was transparently structured from the start. Highly recommended for organizations building remote teams.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
+    <!-- Testimonial End -->
 
 
 
-
-
- <!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 pt-5 px-sm-3 px-md-5">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
-                <a href=""><h1 class="text-secondary mb-3"><span class="text-white">REMOTE</span>HIRE</h1></a>
+                <a href=""><h1 class="text-secondary mb-3"><span class="text-white">XCELENT</span>HIRE</h1></a>
                 <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sit no, sed kasd et ipsum dolor duo dolor</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
@@ -288,8 +330,8 @@
     </div>
     <div class="container-fluid bg-dark text-white py-4 px-sm-3 px-md-5">
         <p class="m-0 text-center text-white">
-            &copy; <a class="text-white font-weight-medium" href="#">Your Site Name</a>. All Rights Reserved. Designed by
-            <a class="text-white font-weight-medium">Billionaire-Developer</a>
+            &copy; <a class="text-white font-weight-medium" href="#">2026 XcelentHire</a>. All Rights Reserved.
+            <a class="text-white font-weight-medium"></a>
         </p>
     </div>
     <!-- Footer End -->
