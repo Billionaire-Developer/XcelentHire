@@ -1,4 +1,3 @@
-const { response } = require("express");
 
 (function ($) {
     "use strict";
@@ -85,7 +84,6 @@ const { response } = require("express");
             }
         }
     });
-    
 })(jQuery);
 
 
