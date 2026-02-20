@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 (function ($) {
     "use strict";
     
@@ -85,4 +87,22 @@
     });
     
 })(jQuery);
+
+
+//Applying to XcelentHire Job Pool
+
+const form = document.getElementById('myForm');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(from);
+    fetch('/api/submit-applicaton', {
+        method: 'POST',
+        body: JSON.stringify(Object.fromEntries(formData)),
+        headers: {'content-Type': 'application/json'}
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error = console.log(error))
+});
 
