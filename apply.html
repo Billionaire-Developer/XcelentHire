@@ -127,7 +127,7 @@
                         <h4 class="mb-4 text-center">Apply for a position at XcelentHire</h4>
                         <p class="text-center mb-4 font-italic">Submit your application to join our talent pool</p>
 
-                        <form action="/submit-application" method="post" class="w-100" enctype="multipart/form-data" id="myForm">
+                        <form action="http://localhost:5000/submit-application" method="post" class="w-100" enctype="multipart/form-data" id="myForm">
 
                             <!-- Personal Information -->
                             <h6 class="mb-3">Personal Information</h6>
@@ -157,10 +157,10 @@
                             <h6 class="mt-4 mb-3">Professional Information</h6>
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" placeholder="Current Job Title">
+                                    <input type="text" class="form-control" name="current_job_title" placeholder="Current Job Title">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <select class="form-control">
+                                    <select class="form-control" name="years_experience">
                                         <option selected disabled>Years of Experience</option>
                                         <option>0 - 1 year</option>
                                         <option>2 - 4 years</option>
@@ -171,7 +171,7 @@
                             </div>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Primary Skills (e.g. React, Node, UI/UX)">
+                                <input type="text" class="form-control" name="primary_skills" placeholder="Primary Skills (e.g. React, Node, UI/UX)">
                             </div>
 
                             <!-- Resume & Links -->
@@ -179,10 +179,10 @@
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label class="small">Upload Resume</label>
-                                    <input type="file" class="form-control-file" accept=".pdf,.doc,.docx" required>
+                                    <input type="file" class="form-control-file" name="resume" accept=".pdf,.doc,.docx" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="url" class="form-control" placeholder="Portfolio / GitHub / LinkedIn URL">
+                                    <input type="url" class="form-control" placeholder="Portfolio / GitHub / LinkedIn URL" name="portfolio_url">
                                 </div>
                             </div>
 
@@ -190,7 +190,7 @@
                             <h6 class="mt-4 mb-3">Work Preferences</h6>
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <select class="form-control">
+                                    <select class="form-control" name="preferred_work_type">
                                         <option selected disabled>Preferred Work Type</option>
                                         <option>Full-time</option>
                                         <option>Part-time</option>
@@ -199,7 +199,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <select class="form-control">
+                                    <select class="form-control" name="availability">
                                         <option selected disabled>Availability</option>
                                         <option>Immediately</option>
                                         <option>2 Weeks</option>
@@ -212,7 +212,7 @@
                             <h6 class="mt-4 mb-3">Additional Information</h6>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"
-                                        placeholder="Briefly tell us about yourself or your remote work experience"></textarea>
+                                    placeholder="Briefly tell us about yourself or your remote work experience" name="about"></textarea>
                             </div>
 
                             <!-- Consent -->

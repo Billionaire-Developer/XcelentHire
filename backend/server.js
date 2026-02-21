@@ -1,11 +1,18 @@
-const express = require('express')
-const app = express()
+require("dotenv").config();
+const express = require("express");
+const cors = require("cors");
+const applicationRoutes = require("./routes/applicationRoutes");
 
-app.use('/', (req, res) =>{
-    res.send("Hello!")
-})
+const app = express();
 
-port = 5500
-app.listen(port, () =>{
-    console.log(`server running a port ${port}`)
-})
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/uploads", express.static("uploads"));
+
+app.use("/", applicationRoutes);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

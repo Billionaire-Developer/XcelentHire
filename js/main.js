@@ -88,19 +88,28 @@
 
 
 //Applying to XcelentHire Job Pool
+document.getElementById("myForm").addEventListener("submit", async function(e) {
+    e.preventDefault(); // stop the normal form submit
 
-const form = document.getElementById('myForm');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form); // automatically grabs all fields + files
 
-    const formData = new FormData(from);
-    fetch('/api/submit-applicaton', {
-        method: 'POST',
-        body: JSON.stringify(Object.fromEntries(formData)),
-        headers: {'content-Type': 'application/json'}
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error = console.log(error))
+    try {
+        const res = await fetch("http://localhost:5000/submit-application", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+            alert("✅ " + data.message); // show success
+            form.reset(); // clear form
+        } else {
+            alert("❌ " + (data.error || "Submission failed"));
+        }
+    } catch (err) {
+        console.error(err);
+        alert("❌ Error submitting form. Check console for details.");
+    }
 });
-
