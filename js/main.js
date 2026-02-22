@@ -88,10 +88,27 @@
 
 
 //Applying to XcelentHire Job Pool
+//Applying to XcelentHire Job Pool
 document.getElementById("myForm").addEventListener("submit", async function(e) {
     e.preventDefault(); // stop the normal form submit
 
     const form = e.target;
+    const submitBtn = form.querySelector("button[type='submit']");
+    
+    // Create a loading span if it doesn't exist
+    let loadingSpan = document.getElementById("loadingText");
+    if (!loadingSpan) {
+        loadingSpan = document.createElement("span");
+        loadingSpan.id = "loadingText";
+        loadingSpan.textContent = " ⏳ Submitting...";
+        loadingSpan.style.marginLeft = "10px";
+        form.appendChild(loadingSpan);
+    }
+
+    // Show loading
+    submitBtn.disabled = true;
+    loadingSpan.style.display = "inline";
+
     const formData = new FormData(form); // automatically grabs all fields + files
 
     try {
@@ -111,5 +128,9 @@ document.getElementById("myForm").addEventListener("submit", async function(e) {
     } catch (err) {
         console.error(err);
         alert("❌ Error submitting form. Check console for details.");
+    } finally {
+        // Hide loading
+        submitBtn.disabled = false;
+        loadingSpan.style.display = "none";
     }
 });
