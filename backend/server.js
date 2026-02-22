@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const supabase = require("./supabase");
 const applicationRoutes = require("./routes/applicationRoutes");
 
 const app = express();
