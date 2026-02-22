@@ -95,7 +95,7 @@ document.getElementById("myForm").addEventListener("submit", async function(e) {
     const formData = new FormData(form); // automatically grabs all fields + files
 
     try {
-        const res = await fetch("http://localhost:5000/submit-application", {
+        const res = await fetch("https://xcelenthire.onrender.com/submit-application", {
             method: "POST",
             body: formData
         });
