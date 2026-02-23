@@ -51,6 +51,6 @@ exports.submitApplication = async (req, res) => {
     res.status(200).json({ message: "Application submitted successfully!" });
   } catch (err) {
     console.error("Upload error:", err);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: "An error occurred, try again later!" });
   }
 };
