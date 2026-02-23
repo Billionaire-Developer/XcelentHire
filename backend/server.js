@@ -15,13 +15,6 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use("/", applicationRoutes);
 
-
-// 2️⃣ Supabase Setup
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_ANON_KEY
-);
-
 // 3️⃣ Email Transporter Setup
 const transporter = nodemailer.createTransport({
   service: "gmail",
