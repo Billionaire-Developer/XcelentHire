@@ -134,3 +134,14 @@ document.getElementById("myForm").addEventListener("submit", async function(e) {
         loadingSpan.style.display = "none";
     }
 });
+
+//Start Hiring, leading to Calendly
+document.getElementById("hireForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = this.contact_person.value;
+    const email = this.email.value;
+
+    window.location.href =
+      `https://calendly.com/xcelenthire/30min?name=${name}&email=${email}`;
+});

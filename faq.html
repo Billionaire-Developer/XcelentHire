@@ -88,7 +88,9 @@
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        <button><a href="hire.html" class="nav-item nav-link">Start Hiring</a>
+                        <a href="#" data-toggle="modal" data-target="#hireModal" class="nav-item nav-link">
+                            Start Hiring
+                        </a>
                         <button><a href="apply.html" class="nav-item nav-link">Apply for Job</a>
                     </div>
                 </div>
@@ -354,5 +356,73 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+
+
+
+
+    <!-- Hire Form Modal -->
+    <div class="modal fade" id="hireModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Schedule a call to start hiring!</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="hireForm">
+                        <!-- Row 1: First & Last Name -->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control form-control-lg" id="firstName" class="form-control" placeholder="first name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control form-control-lg" id="lastName" class="form-control" placeholder="last name" required>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Email & Phone -->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <label for="workEmail">Work Email</label>
+                            <input type="email" class="form-control form-control-lg" id="workEmail" class="form-control" placeholder="john@company.com" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" class="form-control form-control-lg" id="phoneNumber" class="form-control" placeholder="+1 555 123 4567" required>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Referral Source (Full Width) -->
+                        <div class="form-group">
+                            <label for="referral">How did you hear about us?</label>
+                            <select id="referral" class="form-control" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option>Google Search</option>
+                            <option>LinkedIn</option>
+                            <option>Twitter / X</option>
+                            <option>Referral</option>
+                            <option>Job Board</option>
+                            <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Submit & Continue
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </body>
