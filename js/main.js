@@ -127,7 +127,7 @@ document.getElementById("myForm").addEventListener("submit", async function(e) {
         }
     } catch (err) {
         console.error(err);
-        alert("❌ Error submitting form. Check console for details.");
+        alert("❌ Error submitting application. Try again!.");
     } finally {
         // Hide loading
         submitBtn.disabled = false;
