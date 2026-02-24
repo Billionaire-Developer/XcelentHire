@@ -87,7 +87,7 @@
 })(jQuery);
 
 
-//Applying to XcelentHire Job Pool
+//Applying to  Job Pool
 document.getElementById("myForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
@@ -137,4 +137,16 @@ document.getElementById("hireForm").addEventListener("submit", function(e) {
 
     window.location.href =
       `https://calendly.com/xcelenthire/30min?name=${name}&email=${email}`;
+});
+
+
+
+document.getElementById("calendlyBtn").addEventListener("click", function () {
+    if (typeof Calendly !== "undefined") {
+        Calendly.initPopupWidget({
+            url: "https://calendly.com/xcelenthire/30min"
+        });
+    } else {
+        console.error("Calendly not loaded.");
+    }
 });

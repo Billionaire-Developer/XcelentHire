@@ -23,6 +23,9 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Calendly script -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 
 <body>
@@ -109,8 +112,8 @@
                     <img class="w-100" src="img/carousel.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">XCELENT-HIRE</h4>
-                            <h1 class="display-3 text-white mb-md-4">Talent Without Limits</h1>
+                            <h4 class="text-white text-uppercase mb-md-3"><b>XCELENT-HIRE</b></</h4>
+                            <h1 class="display-3 text-white mb-md-4">Unlocking Potential. Delivering Excellence.</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
                         </div>
                     </div>
@@ -119,8 +122,8 @@
                     <img class="w-100" src="img/carousel 2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h4 class="text-white text-uppercase mb-md-3">XCELENT-HIRE</h4>
-                            <h1 class="display-3 text-white mb-md-4">Hire Beyond Borders</h1>
+                            <h4 class="text-white text-uppercase mb-md-3"><b>XCELENT-HIRE</b></h4>
+                            <h1 class="display-3 text-white mb-md-4">Beyond Borders. Beyond Limits.</h1>
                             <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Learn More</a>
                         </div>
                     </div>
@@ -373,7 +376,7 @@
                             <p>Customer Support Rep.</p>
                             <p>CRM Data Manager</p>
                         </div>
-                        <a href="hireModal" class="btn btn-secondary py-2 px-4">Signup Now</a>
+                        <button type="button" class="btn btn-secondary py-2 px-4" id="calendlyBtn">Signup Now</button>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -391,7 +394,7 @@
                             <p>Operations Coordinator</p>
                             <p>QA Analyst</p>
                         </div>
-                        <a href="hire.html" class="btn btn-primary py-2 px-4">Signup Now</a>
+                        <button type="button" class="btn btn-secondary py-2 px-4" id="calendlyBtn">Signup Now</button>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -409,7 +412,7 @@
                             <p>Software Developer</p>
                             <p>Database Administrator</p>
                         </div>
-                        <a href="hire.html" class="btn btn-secondary py-2 px-4">Signup Now</a>
+                        <button type="button" class="btn btn-secondary py-2 px-4" id="calendlyBtn">Signup Now</button>
                     </div>
                 </div>
             </div>
@@ -666,6 +669,19 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- For calendly popup widget-->
+    <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+    <script>
+    document.getElementById("calendlyBtn").addEventListener("click", function () {
+        Calendly.initPopupWidget({
+            url: "https://calendly.com/"
+        });
+    });
+    </script>
 </body>
 
 </html>
