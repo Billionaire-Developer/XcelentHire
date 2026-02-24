@@ -9709,18 +9709,18 @@ h6,
   position: absolute;
   top: 0;
   right: 0;
-  width: 220px;
-  height: 220px;
+  width: 210px;
+  height: 210px;
   background-color: var(--green);
-  border-bottom-left-radius: 200px;
+  border-bottom-left-radius: 180px;
 }
 
 .shape-cyan {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   background-color: var(--cyan);
-  border-top-left-radius: 180px;
+  border-top-left-radius: 160px;
 }
