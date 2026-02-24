@@ -9681,3 +9681,46 @@ h6,
   box-shadow: 0 10px 30px white;
   border-radius: 20px;
 }
+
+
+
+
+.mission-box {
+  background-color: #f3f4f6;
+  border-radius: 30px;
+  position: relative;
+}
+
+/* Button */
+.mission-btn {
+  background-color: #0b3d2e;
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.mission-btn:hover {
+  background-color: #0e4a38;
+  color: white;
+}
+
+/* Decorative Shapes */
+.shape-blue {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 220px;
+  background-color: var(--green);
+  border-bottom-left-radius: 200px;
+}
+
+.shape-cyan {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 180px;
+  height: 180px;
+  background-color: var(--cyan);
+  border-top-left-radius: 180px;
+}
