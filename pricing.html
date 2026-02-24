@@ -138,14 +138,15 @@
                             </h1>
                         </div>
                         <div class="d-flex flex-column align-items-center py-3" style="color: black">
-                            <p class="mb-1"><b>Data Entry</b></p>
-                            <p class="mb-1"><b>Customer Service Rep</b></p>
-                            <p class="mb-1"><b>Reaserch</b></p>
-                            <p class="mb-1"><b>Reaserch</b></p>
-                            <p class="mb-1"><b>Reaserch</b></p>
-                            <p class="mb-0"><b>Compatible With All Browsers</b></p>
+                            <p class="mb-1">Data Entry</p>
+                            <p class="mb-1">Customer Service Rep</p>
+                            <p class="mb-1">Reaserch</p>
+                            <p class="mb-1">Transcription</p>
+                            <p class="mb-1">Virtual assitant/Admin support</p>
+                            <p class="mb-0">Compatible With All Browsers</p>
+                            <p class="mb-0">etc.</p>
                         </div>
-                        <button type="button" class="btn btn-secondary py-2 px-4" id="calendlyBtn">Signup Now</button>
+                        <button type="button" class="btn btn-secondary py-2 px-4 calendlyBtn" >Signup Now</button>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -157,12 +158,15 @@
                             </h1>
                         </div>
                         <div class="d-flex flex-column align-items-center py-3" style="color: black">
-                            <p>IT Support / System administrator</p>
-                            <p>Business Analyst / Data Analyst</p>
-                            <p>TierII data entry / Research</p>
-                            <p>Compatible With All Browsers</p>
+                            <p class="mb-1">IT Support / System administrator</p>
+                            <p class="mb-1">Business Analyst / Data Analyst</p>
+                            <p class="mb-1">Content Writing/Copywriting</p>
+                            <p class="mb-1">Web research & Lead generation</p>
+                            <p class="mb-1">TierII data entry / Research</p>
+                            <p class="mb-0">Compatible With All Browsers</p>
+                            <p class="mb-0">etc</p>
                         </div>
-                        <button type="button" class="btn btn-secondary py-2 px-4" id="calendlyBtn">Signup Now</button>
+                        <button type="button" class="btn btn-secondary py-2 px-4 calendlyBtn">Signup Now</button>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -174,12 +178,15 @@
                             </h1>
                         </div>
                         <div class="d-flex flex-column align-items-center py-3" style="color: black">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap 4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
+                            <p class="mb-1">Project Management/Scrum Master</p>
+                            <p class="mb-1">Software Development</p>
+                            <p class="mb-1">SEO/SEM Strategy</p>
+                            <p class="mb-1">Blockchain/Smart Contract Development</p>
+                            <p class="mb-1">Advance Data Analysis/Data Science</p>
+                            <p class="mb-0">UI/UX Design</p>
+                            <p class="mb-0">etc</p>
                         </div>
-                        <button type="button" class="btn btn-secondary py-2 px-4" id="calendlyBtn">Signup Now</button>
+                        <button type="button" class="btn btn-secondary py-2 px-4 calendlyBtn">Signup Now</button>
                     </div>
                 </div>
             </div>
@@ -376,9 +383,10 @@
     <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 
     <script>
-    document.getElementById("calendlyBtn").addEventListener("click", function () {
-        Calendly.initPopupWidget({
-            url: "https://calendly.com/"
+        document.querySelectorAll(".calendlyBtn").forEach(btn => {
+        btn.addEventListener("click", function() {
+            Calendly.initPopupWidget({ url: "https://calendly.com/" });
+            return false;
         });
     });
     </script>
