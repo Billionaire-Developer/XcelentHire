@@ -9677,3 +9677,7 @@ h6,
   text-align: center;
   min-width: 250px; /* prevents text cut */
 }
+.custom-shadow {
+  box-shadow: 0 10px 30px white;
+  border-radius: 20px;
+}
