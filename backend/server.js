@@ -37,7 +37,7 @@ app.post("/apply", async (req, res) => {
 
   // Send email
   await transporter.sendMail({
-    from: '"XcelentHire" <hr@xcelenthire.com>',
+    from: '"XcelentHire" <${process.env.EMAIL_USER}>',
     to: email,
     subject: "Application Received",
     html: `

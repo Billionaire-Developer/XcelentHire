@@ -88,28 +88,20 @@
 
 
 //Applying to XcelentHire Job Pool
-//Applying to XcelentHire Job Pool
 document.getElementById("myForm").addEventListener("submit", async function(e) {
-    e.preventDefault(); // stop the normal form submit
+    e.preventDefault();
 
     const form = e.target;
+    const overlay = document.getElementById("overlay");
+    const successMessage = document.getElementById("successMessage");
     const submitBtn = form.querySelector("button[type='submit']");
-    
-    // Create a loading span if it doesn't exist
-    let loadingSpan = document.getElementById("loadingText");
-    if (!loadingSpan) {
-        loadingSpan = document.createElement("span");
-        loadingSpan.id = "loadingText";
-        loadingSpan.textContent = " ⏳ Submitting...";
-        loadingSpan.style.marginLeft = "10px";
-        form.appendChild(loadingSpan);
-    }
 
-    // Show loading
+    // Show blur + overlay
+    form.classList.add("form-blur");
+    overlay.style.display = "flex";
     submitBtn.disabled = true;
-    loadingSpan.style.display = "inline";
 
-    const formData = new FormData(form); // automatically grabs all fields + files
+    const formData = new FormData(form);
 
     try {
         const res = await fetch("https://xcelenthire.onrender.com/submit-application", {
@@ -120,21 +112,22 @@ document.getElementById("myForm").addEventListener("submit", async function(e) {
         const data = await res.json();
 
         if (res.ok) {
-            alert("✅ " + data.message); // show success
-            form.reset(); // clear form
+            form.reset();
+            successMessage.style.display = "block";
         } else {
             alert("❌ " + (data.error || "Submission failed"));
         }
+
     } catch (err) {
         console.error(err);
-        alert("❌ Error submitting application. Try again!.");
+        alert("❌ Error submitting application. Try again!");
     } finally {
-        // Hide loading
+        // Remove blur + overlay
+        form.classList.remove("form-blur");
+        overlay.style.display = "none";
         submitBtn.disabled = false;
-        loadingSpan.style.display = "none";
     }
 });
-
 //Start Hiring, leading to Calendly
 document.getElementById("hireForm").addEventListener("submit", function(e) {
     e.preventDefault();
