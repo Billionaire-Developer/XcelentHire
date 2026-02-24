@@ -9668,8 +9668,12 @@ h6,
 
 /* Loader box */
 .loader-box {
-  background: white;
+  background: #ffffff;
+  color: #000000; /* VERY IMPORTANT */
   padding: 20px 30px;
-  border-radius: 8px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 250px; /* prevents text cut */
 }
