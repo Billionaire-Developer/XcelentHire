@@ -119,8 +119,8 @@ document.getElementById("myForm").addEventListener("submit", async function(e) {
         }
 
     } catch (err) {
-        console.error(err);
-        alert("❌ Error submitting application. Try again!");
+        console.error("Submission error:", err);
+        alert("Network error. Please check internet connection and try again.");
     } finally {
         // Remove blur + overlay
         form.classList.remove("form-blur");
