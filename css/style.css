@@ -9724,3 +9724,12 @@ h6,
   background-color: var(--cyan);
   border-top-left-radius: 160px;
 }
+
+.role-item i {
+    font-size: 2rem;     /* makes icon bigger */
+    margin-right: 18px;  /* adds proper space */
+}
+
+.role-item span {
+    font-size: 1.1rem;   /* slightly bigger text */
+}
