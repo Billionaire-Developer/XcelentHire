@@ -9633,6 +9633,11 @@ h6,
     appearance: none;
 }
 
+#hireFormModal input{
+  border:#007bff;
+  border-radius: 10px;
+}
+
 /* Optional: add a custom arrow */
 #hireFormModal select.form-control::after {
     content: "▼";
